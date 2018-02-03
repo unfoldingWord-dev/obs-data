@@ -10,5 +10,5 @@ CREATE TABLE countries
   sub_region VARCHAR(50) DEFAULT '' NOT NULL,
   region_code VARCHAR(5) DEFAULT '' NOT NULL,
   sub_region_code VARCHAR(5) DEFAULT '' NOT NULL,
-  KEY `idx_country_code` (`country_code`)
+  KEY `idx_country_code` (`alpha2`)
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8mb4 COLLATE=utf8mb4_unicode_ci;

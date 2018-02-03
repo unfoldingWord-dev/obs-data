@@ -36,6 +36,14 @@ for row in rows:
 
     cnx.commit()
 
+sql = '''
+UPDATE phil.languages SET region = 'Oceania'
+WHERE region = 'Pacific';
+'''
+
+cursor.execute(sql)
+cnx.commit()
+
 cnx.close()
 
 print('Finished.')

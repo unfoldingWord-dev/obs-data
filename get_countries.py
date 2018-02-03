@@ -39,6 +39,15 @@ for row in reader:
     cursor.execute(sql, values)
 
 cnx.commit()
+
+sql = '''
+UPDATE phil.countries SET sub_region = 'Northern America'
+WHERE region = 'Americas' AND sub_region IN ('Caribbean', 'Central America');
+'''
+
+cursor.execute(sql)
+cnx.commit()
+
 cnx.close()
 
 print('Finished.')
