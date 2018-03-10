@@ -52,20 +52,17 @@ def get_languages():
     Structure:
     [
       {
-        cc: ["DJ", "US", "CA"],
-        pk: 2,
-        lr: "Africa",
-        ln: "Afaraf",
         ang: "Afar",
-        gw: false,
-        ld: "ltr",
-        alt: ["Afaraf", "Danakil"],
-        lc: aa
+        hc: "ET",
+        lc: "aa",
+        ln: "Afaraf",
+        lr: "Africa",
+        pk: 6
       },
       ...
     ]
     """
-    url = 'http://td.unfoldingword.org/exports/langnames.json'
+    url = 'http://td.unfoldingword.org/exports/langnames_short.json'
     return json.loads(get_url(url))
 
 

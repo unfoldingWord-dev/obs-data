@@ -30,9 +30,8 @@ for row in rows:
     values = (row['ln'], row['lc'], row['ang'], row['lr'])
     cursor.execute(sql, values)
 
-    for cc in row['cc']:
-        values = (row['lc'], cc)
-        cursor.execute(sql2, values)
+    values = (row['lc'], row['hc'])
+    cursor.execute(sql2, values)
 
     cnx.commit()
 
